@@ -64,8 +64,6 @@ Transfer Cycle 4+: Spender balance[3] → Receiver balance[3] (stays at final ti
   - Update the `DigitalWalletToken` contract with the deployed `MerchantDigitalWalletToken` contract address so `DigitalWalletToken` can call mint `MerchantDigitalWalletToken`.
   - Update the `MerchantDigitalWalletToken` contract with the deployed `DigitalWalletToken` contract address as the issuer.
 
-Here’s a cleaner and more formal revision of that section for your `README.md`:
-
 ---
 
 1. Merchant Registration to Exception List
@@ -73,8 +71,6 @@ Here’s a cleaner and more formal revision of that section for your `README.md`
   - After registering a merchant in the `AddressRegistry`, the merchant must also be added to the exception list in the `DigitalWalletToken (ERC7818Exception)` contract.
   - This can be done either manually or via an owner contract call executed in sequence.  
    _**Note:** This step is not required when using `DigitalWalletTokenV2`._
-
-
 
 #### Additional Rules
 - Tokens held by citizens **MUST NOT** be transferable from one citizen to another.
